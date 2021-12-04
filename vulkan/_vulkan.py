@@ -1,4 +1,9 @@
-import collections as _collections
+import collections
+try:
+    _collections = collections.abc
+except AttributeError:
+    _collections = collections
+
 import weakref as _weakref
 import sys
 
